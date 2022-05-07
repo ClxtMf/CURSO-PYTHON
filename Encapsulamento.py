@@ -1,17 +1,26 @@
-class Pessoas:
+class Pessoa:
     def __init__(self):
-        self.Nome = ''
-        self.Idade = 0
-        self.Cpf = ''
+        self.__nome = ''
+        self.__idade = 0
+        self.__cpf = ''
 
-    def set_Nome(self, Nome):
-        self.Nome = Nome
+    def set_nome(self, nome):
+        self.__nome = nome
 
-    def set_Idade(self, Idade):
-        if Idade > 0:
-            self.Idade = Idade
+    def set_idade(self, idade):
+        self.__idade = idade
 
-    def set_Cpf(self, Cpf):
-        self.Cpf = Cpf
-        
-Pessoas = Pessoas()
+    def set_cpf(self, cpf):
+        self.__cpf = cpf
+
+    def get_nome(self):
+        return self.nome
+
+    def get_idade(self):
+        return self.idade
+
+    def get_cpf(self):
+        return self.cpf
+
+
+pessoa = Pessoa()
