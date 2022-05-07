@@ -100,3 +100,40 @@ conta1.depositar(1500)
 
 print(f'Seu saldo após o deposito: {conta1.saldo}')
 
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+class Elevador:
+
+    def __init__(self, Capacidade_Limite, QuantidadeDeAndares, QuantidadeDePessoas_NoElevador, AndarAtual):
+        self.Capacidade_Limite = Capacidade_Limite
+        self.QuantidadeDeAndares = QuantidadeDeAndares
+        self. QuantidadeDePessoas_NoElevador = QuantidadeDePessoas_NoElevador
+        self.AndarAtual = AndarAtual
+
+    def subir(self):
+        if self.AndarAtual < self.QuantidadeDeAndares:
+            self.AndarAtual += 1
+        else:
+            print('O elevador já se encontra no último andar.')
+
+    def descer(self):
+        if self.AndarAtual > 0:
+            self.AndarAtual -= 1
+        else:
+            print('O elevador já se encontra no térreo.')
+
+    def entrar(self):
+        Entrar = print(int('Informe a quantidade de pessoas que vão entrar no elevador: '))
+        if Entrar < self.Capacidade_Limite:
+            self.QuantidadeDePessoas_NoElevador += 1
+        else:
+            print('Já está na capacidade máxima.')
+
+    def sair(self):
+        Sair = print(int('Informe a quantidade de pessoas que vão sair do elevador: '))
+        if Sair > 0:
+            self.QuantidadeDePessoas_NoElevador -= 1
+        else:
+            print('Não há ninguém no elevador.')
+
+Elevador = Elevador(10, 15, 7, 5)
