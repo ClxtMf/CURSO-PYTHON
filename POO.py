@@ -103,37 +103,55 @@ print(f'Seu saldo após o deposito: {conta1.saldo}')
 """""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 class Elevador:
-
-    def __init__(self, Capacidade_Limite, QuantidadeDeAndares, QuantidadeDePessoas_NoElevador, AndarAtual):
-        self.Capacidade_Limite = Capacidade_Limite
-        self.QuantidadeDeAndares = QuantidadeDeAndares
-        self. QuantidadeDePessoas_NoElevador = QuantidadeDePessoas_NoElevador
-        self.AndarAtual = AndarAtual
+    def __init__(self, capacidade, qtd_andares, qtd_pessoas, andar_atual):
+        self.capacidade = capacidade
+        self.qtd_andares = qtd_andares
+        self.qtd_pessoas = qtd_pessoas
+        self.andar_atual = andar_atual
 
     def subir(self):
-        if self.AndarAtual < self.QuantidadeDeAndares:
-            self.AndarAtual += 1
+        if self.andar_atual < self.qtd_andares - 1:
+            self.andar_atual += 1
+            print('Subindo...')
+            print(f'Andar atual: {self.andar_atual}')
         else:
-            print('O elevador já se encontra no último andar.')
+            print('Você já está no ultimo andar!')
 
     def descer(self):
-        if self.AndarAtual > 0:
-            self.AndarAtual -= 1
+        if self.andar_atual == 0:
+            print('Você já esta no terreo!!')
         else:
-            print('O elevador já se encontra no térreo.')
+            self.andar_atual -= 1
+            print('Descendo...')
+            print(f'Andar atual: {self.andar_atual}')
 
-    def entrar(self):
-        Entrar = print(int('Informe a quantidade de pessoas que vão entrar no elevador: '))
-        if Entrar < self.Capacidade_Limite:
-            self.QuantidadeDePessoas_NoElevador += 1
+    def entrar(self, qtd_pessoas):
+        if self.qtd_pessoas + qtd_pessoas >= self.capacidade:
+            print('Elevador lotado!!!')
         else:
-            print('Já está na capacidade máxima.')
+            self.qtd_pessoas += qtd_pessoas
+            print('Entrando...')
+            print(f'Quantidade de pessoas: {self.qtd_pessoas}')
 
-    def sair(self):
-        Sair = print(int('Informe a quantidade de pessoas que vão sair do elevador: '))
-        if Sair > 0:
-            self.QuantidadeDePessoas_NoElevador -= 1
+    def sair(self, qtd_pessoas):
+        if self.qtd_pessoas - qtd_pessoas < 0:
+            print('Não tem essa quantidade dentro do elevador!!')
         else:
-            print('Não há ninguém no elevador.')
+            self.qtd_pessoas -= qtd_pessoas
+            print('Saindo...')
+            print(f'Quantidade de pessoas: {self.qtd_pessoas}')
 
-Elevador = Elevador(10, 15, 7, 5)
+
+
+
+elevador = Elevador(20,15,7,5)
+
+plaza = Elevador(30, 10, 9, 9)
+
+elevador.subir()
+elevador.subir()
+elevador.subir()
+elevador.entrar(5)
+elevador.sair(7)
+elevador.descer()
+elevador.descer()
