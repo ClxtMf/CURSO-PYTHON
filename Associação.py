@@ -53,7 +53,7 @@ Claudinho.Saude = 50
 
 Claudinho.get_Humor()
 
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
 class Salário:
     def __init__(self, valor_da_hora, qtd_Horas, comissão) -> None:
@@ -77,7 +77,6 @@ Funcionário = Funcionário('Calixto', 16, 22, 160, 1500)
 
 print(f'Salário Total: {Funcionário.SalárioTotal()}')
 
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 
 
