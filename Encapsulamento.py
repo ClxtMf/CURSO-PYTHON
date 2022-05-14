@@ -27,6 +27,8 @@ pessoa = Pessoa()
 
 """""""""""""""""""""""""""""""""""""""""""""
 
+upgrade 2.0
+
 class Pessoa:
     def __init__(self):
         self.__nome = ''
