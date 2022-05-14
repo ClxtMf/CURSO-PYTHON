@@ -141,6 +141,62 @@ pizza_hut.inserirEndereco('Av Santos Dummont', 'Aldeota', 'Fortaleza')
 pizza_hut.inserirEndereco('Pe. Antonio Thomaz', 'Água Fria', 'Fortaleza')
 pizza_hut.exibirEnderecos()
 
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+class Produto: 
+    def __init__(self, código, nome, valor) -> None:
+        self.__código = código
+        self.__nome = nome
+        self.__valor = valor
+
+    @property
+    def código(self, nome):
+        return self.__código
+
+    @property
+    def nome(self, nome):
+        return self.__nome
+
+    @property
+    def valor(self, valor):
+        return self.__valor
+        
+
+class Carrinho: 
+    def __init__(self) -> None:
+        self.__produtos = []
+
+    @property
+    def produtos(self, produtos):
+        return self.__produtos
+
+    def InserirProdutos(self, produto):
+        self.produtos.append(produto)
+
+    def ListaProduto(self):
+        for produto in self.produtos:
+         print(f'Produto: {produto.código} \n Produto: {produto.nome} \n Produto: {produto.valor}')
+
+    def SomarOsProdutos(self):
+        Total = 0
+
+        for produtos in self.produtos:
+          Total += produtos.preço
+        print(f'Valor a pagar: {Total}')
+
+
+produto01 = Produto( 1, 'Carne', 1000)
+produto02 = Produto(2, 'Arroz', 100)
+
+Carrinho = Carrinho()
+
+Carrinho.InserirProdutos(produto01)
+Carrinho.InserirProdutos(produto02)
+
+Carrinho.ListaProduto()
+Carrinho.SomarOsProdutos()
+
+
 
 
 
