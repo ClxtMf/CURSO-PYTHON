@@ -329,5 +329,58 @@ class Gerente(Funcionario):
 estagiario = Estagiario(342342, 'Lucas', 10000)
 gerente = Gerente(546455, 'Rodrigo', 60000)
 
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+
+class Funcionario:
+     def __init__(self, matricula, nome, salario):
+         self.matricula = matricula
+         self.nome = nome
+         self.salario = salario
+ 
+class Gerente(Funcionario):
+     def __init__(self, matricula, nome, salario, Setor, Comissao):
+         super().__init__(matricula, nome, salario)
+         self.Setor = Setor
+         self.Comissao = Comissao
+
+     def Contratar(self, qtd_funcionarios):
+        if qtd_funcionarios < 10:
+          print(f'Contratar: {10 - qtd_funcionarios}')
+        else:
+            print('Temos gente o suficiente')
+       
+
+class Estagiario(Funcionario):
+     def __init__(self, matricula, nome, salario, qtd_Horas):
+         super().__init__(matricula, nome, salario)
+         self.qtd_Horas = qtd_Horas
+
+     def contratacao(self):
+        if self.qtd_Horas >= 300:
+            print('Contratato!!!')
+        else:
+            print('Ainda não acabou.')
+
+
+
+estagiario = Estagiario('01', 'marcio', '2.000', 300)
+estagiario.contratacao()
+print(f'Matricula: {estagiario.matricula}')
+print(f'Nome: {estagiario.nome}')
+print(f'Sálario: {estagiario.salario}')
+print(f'Quantidade Horas: {estagiario.qtd_Horas}')
+estagiario.contratacao
+
+print('--------------------------------------------\n')
+
+gerente = Gerente('02', 'joao', '3.000', 'gerencia', '2.000')
+gerente.Contratar(5)
+print(f'Matricula: {gerente.matricula}')
+print(f'Nome: {gerente.nome}')
+print(f'Sálario: {gerente.salario}')
+print(f'Setor: {gerente.Setor}')
+print(f'Comissão: {gerente.Comissao}')
+
 
 
