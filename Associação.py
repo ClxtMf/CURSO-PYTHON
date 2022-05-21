@@ -143,44 +143,57 @@ pizza_hut.exibirEnderecos()
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
-class Produto: 
-    def __init__(self, código, nome, valor) -> None:
-        self.__código = código
-        self.__nome = nome
-        self.__valor = valor
-        
-class Carrinho: 
+class Produto:
+    def __init__(self, codigo, nome, valor):
+        self.codigo = codigo
+        self.nome = nome
+        self.valor = valor
+
+class Carrinho:
     def __init__(self):
-        self.__produtos = []
+        self.produtos = []
 
-    def AddProdutos(self, produto):
-        self.__produtos.append(produto)
+    def addCarrinho(self, produto):
+        self.produtos.append(produto)
 
-    def ListaProduto(self):
+        
+    def listarProdutos(self):
         for produto in self.produtos:
-         print(f'Produto: {produto.código} \n Produto: {produto.nome} \n Produto: {produto.valor}')
+            print(f'Código: {produto.codigo}')
+            print(f'Nome do Produto: {produto.nome}')
+            print(f'Preço: {produto.valor}')
 
-    def SomarOsProdutos(self):
-        Total = 0
+    def calcularTotal(self):
+        total = 0
+        for produto in self.produtos:
+            total = total + produto.valor
 
-        for produtos in self.produtos:
-          Total += produtos.preço
-        print(f'Valor a pagar: {Total}')
-
-
-produto01 = Produto( 1, 'Carne', 1000)
-produto02 = Produto(2, 'Arroz', 100)
-
-Carrinho = Carrinho()
-
-Carrinho.InserirProdutos(produto01)
-Carrinho.InserirProdutos(produto02)
-
-Carrinho.ListaProduto()
-Carrinho.SomarOsProdutos()
+        print(f'Valor total da sua compra: {total}')
 
 
+carrinho = Carrinho()
+while True:
+    print('-- SELECIONE UMA OPÇÃO --')
+    print('1 - Adicionar produto ')
+    print('2 - Listar Produtos ')
+    print('3 - Finalizar compra ')
+    print('4 - Sair ')
 
+    opcao = int(input('Selecione entre 1 - 4: '))
 
+    if opcao == 4:
+        break
 
+    if opcao == 1:
+        codigo = int(input('Informe o código do produto: '))
+        nome = input('Informe o nome do produto: ')
+        valor = float(input('Informe o valor do produto: '))
 
+        produto = Produto(codigo, nome, valor)
+        carrinho.addCarrinho(produto)
+
+    if opcao == 2:
+        carrinho.listarProdutos()
+
+    if opcao == 3:
+        carrinho.calcularTotal()
