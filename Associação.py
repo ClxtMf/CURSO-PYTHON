@@ -55,16 +55,16 @@ Claudinho.get_Humor()
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
-class Salário:
+class Salario:
     def __init__(self, valor_da_hora, qtd_Horas, comissão) -> None:
         self.Valor_Hora = valor_da_hora
         self.Qtd_Hora = qtd_Horas
-        self.Comissão = comissão
+        self.Comissao = comissão
 
     def CalcularSalario(self):
         return (self.Valor_Hora * self.Qtd_Hora) + self.Comissão
 
-class Funcionário:
+class Funcionario:
     def __init__(self, nome, idade, valor_da_hora, qtd_hora, comissão) -> None:
         self.Nome = nome
         self.Idade = idade
