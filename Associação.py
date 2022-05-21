@@ -200,7 +200,7 @@ while True:
         
         
         
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
 
 class Escola:
@@ -239,3 +239,95 @@ escola.matricularAluno(aluno1)
 escola.matricularAluno(aluno2)
 
 escola.listarAlunos()
+
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+
+'''
+class Pessoa:
+    def __init__(self, Nome, Idade, Cpf) -> None:
+        self.Nome = Nome
+        self.Idade = Idade
+        self.Cpf = Cpf
+        
+
+class Aluno(Pessoa):
+    pass
+
+
+class Professor(Pessoa):
+    pass
+
+
+class Coordenador(Pessoa):
+    pass
+
+
+a1 = Aluno('Calixto', 16, '822.355.533-35')
+print(f'Nome: {a1.Nome}')
+print(f'Idade: {a1.Idade}')
+print(f'Cpf: {a1.Cpf}')
+'''
+
+class Funcionario:
+     def __init__(self):
+         self.__matricula = ''
+         self.__nome = ''
+         self.__salario = 0
+
+     @property
+     def matricula(self):
+         return self.__matricula
+
+     @property
+     def nome(self):
+         return self.__nome
+
+     @property
+     def salario(self):
+         return self.__salario
+
+     @matricula.setter
+     def matricula(self, matricula):
+         self.__matricula = matricula
+
+     @nome.setter
+     def nome(self, nome):
+         self.__nome = nome
+
+     @salario.setter
+     def salario(self, salario):
+         self.__salario = salario
+
+class Estagiario(Funcionario):
+     ...
+     
+class Gerente(Funcionario):
+     ...
+
+estagiario = Estagiario()
+estagiario.matricula = '3423423'
+estagiario.nome = 'Rodrigo'
+estagiario.salario = 10000
+print(estagiario.matricula)
+print(estagiario.nome)
+print(estagiario.salario)
+
+class Funcionario:
+     def __init__(self, matricula, nome, salario):
+         self.matricula = matricula
+         self.nome = nome
+         self.salario = salario
+ 
+class Estagiario(Funcionario):
+     ...
+
+class Gerente(Funcionario):
+     ...
+
+estagiario = Estagiario(342342, 'Lucas', 10000)
+gerente = Gerente(546455, 'Rodrigo', 60000)
+
+
+
