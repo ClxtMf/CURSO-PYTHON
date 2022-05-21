@@ -382,5 +382,76 @@ print(f'Sálario: {gerente.salario}')
 print(f'Setor: {gerente.Setor}')
 print(f'Comissão: {gerente.Comissao}')
 
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
+class Conta:
+    def __init__(self, Numero, Titular, Saldo) -> None:
+        self.__Numero = Numero
+        self.__Titular = Titular
+        self.__Saldo = Saldo
+    
+    @property
+    def Numero(self):
+        return self.__Numero
+    @Numero.setter
+    def Numero(self, Numero):
+        self.__Numero = Numero
+
+    @property
+    def Titular(self):
+        return self.__Titular
+    @Titular.setter
+    def Titular(self, Titular):
+        self.__Titular = Titular
+        
+    @property
+    def Saldo(self):
+        return self.__Saldo
+    @Saldo.setter
+    def Saldo(self, Saldo):
+        self.__Saldo = Saldo
+
+
+    def sacar(self, Valor):
+        if self.Saldo - Valor > 0:
+            self.Saldo -= Valor
+            print('Saque realizado.')
+    
+    def depositar(self, Valor):
+        if Valor > 0:
+            self.Saldo += Valor
+            print('Deposito feito.')
+
+class ContaCorrente(Conta):
+    def __init__(self, Numero, Titular, Saldo, Limite) -> None:
+        super().__init__(Numero, Titular, Saldo)
+        self.__Limite = Limite
+
+    @property
+    def Limite(self):
+        return self.__Limite
+    @Limite.setter
+    def Limite(self, Limite):
+        self.__Limite = Limite   
+
+    def extrato(self):
+        print(f'Número da conta: {self.__Numero}')
+        print(f'Número da conta: {self.__Titular}')
+        print(f'Número da conta: {self.__Saldo}')
+        print(f'Número da conta: {self.__Limite}')
+
+class Poupanca(Conta):
+    def __init__(self, Numero, Titular, Saldo, rendimento) -> None:
+        super().__init__(Numero, Titular, Saldo)
+        self.rendimento = rendimento
+
+    def RendimentoMensal(self):
+        self.__Saldo = self.__Saldo + (self.__Saldo * (self.rendimento / 100))
+        print(f'Saldo após o rendimento: {self.__Saldo}')
+
+
+Conta01 = Conta('020202-2', 'Calixto', '6.000,00')
+print(f'Número da conta: {Conta01.Numero}')
+print(f'Nome do titular: {Conta01.Titular}')
+print(f'Saldo do titular: {Conta01.Saldo}
 
