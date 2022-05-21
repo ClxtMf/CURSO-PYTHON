@@ -197,3 +197,45 @@ while True:
 
     if opcao == 3:
         carrinho.calcularTotal()
+        
+        
+        
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+
+class Escola:
+    def __init__(self, nome, endereco):
+        self.nome = nome
+        self.endereco = endereco
+        self.cursos = ['Dev FullStack', 'Fotografia', 'Design']
+        self.alunos = []
+
+    def listarAlunos(self):
+        for aluno in self.alunos:
+            print(f'Matricula: {aluno.matricula}')
+            print(f'Nome: {aluno.nome}')
+            print(f'Idade: {aluno.idade}')
+            print(f'Curso: {aluno.curso}')
+            print(f'-----------------------------\n')
+
+    def matricularAluno(self, aluno):
+        self.alunos.append(aluno)
+
+class Aluno:
+    def __init__(self, matricula, nome, idade, curso):
+        self.matricula = matricula
+        self.nome = nome
+        self.idade = idade
+        self.curso = curso
+
+
+
+aluno1 = Aluno(1, 'João', 19, 'Dev FullStack')
+aluno2 = Aluno(2, 'Maria', 21, 'Fotografia')
+
+
+escola = Escola('Infinity School', 'Santos Dummont')
+escola.matricularAluno(aluno1)
+escola.matricularAluno(aluno2)
+
+escola.listarAlunos()
