@@ -56,7 +56,7 @@ Claudinho.get_Humor()
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
 class Salario:
-    def __init__(self, valor_da_hora, qtd_Horas, comissão) -> None:
+    def __init__(self, valor_da_hora, qtd_Horas, comissao) -> None:
         self.Valor_Hora = valor_da_hora
         self.Qtd_Hora = qtd_Horas
         self.Comissao = comissão
@@ -65,17 +65,17 @@ class Salario:
         return (self.Valor_Hora * self.Qtd_Hora) + self.Comissão
 
 class Funcionario:
-    def __init__(self, nome, idade, valor_da_hora, qtd_hora, comissão) -> None:
+    def __init__(self, nome, idade, valor_da_hora, qtd_hora, comissao) -> None:
         self.Nome = nome
         self.Idade = idade
-        self.Salário = Salário(valor_da_hora, qtd_hora, comissão)
+        self.Salário = Salário(valor_da_hora, qtd_hora, comissao)
 
     def SalárioTotal(self):
         return self.Salário.CalcularSalario()
 
-Funcionário = Funcionário('Calixto', 16, 22, 160, 1500)
+Funcionario = Funcionario('Calixto', 16, 22, 160, 1500)
 
-print(f'Salário Total: {Funcionário.SalárioTotal()}')
+print(f'Salário Total: {Funcionario.SalárioTotal()}')
 
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
@@ -148,30 +148,13 @@ class Produto:
         self.__código = código
         self.__nome = nome
         self.__valor = valor
-
-    @property
-    def código(self, nome):
-        return self.__código
-
-    @property
-    def nome(self, nome):
-        return self.__nome
-
-    @property
-    def valor(self, valor):
-        return self.__valor
         
-
 class Carrinho: 
-    def __init__(self) -> None:
+    def __init__(self):
         self.__produtos = []
 
-    @property
-    def produtos(self, produtos):
-        return self.__produtos
-
-    def InserirProdutos(self, produto):
-        self.produtos.append(produto)
+    def AddProdutos(self, produto):
+        self.__produtos.append(produto)
 
     def ListaProduto(self):
         for produto in self.produtos:
