@@ -143,6 +143,42 @@ infinity.calcularImposto()
 maria.exibirDados()
 infinity.exibirDados()
 
+from abc import ABC, abstractmethod
+
+class Ave(ABC):
+    def __init__(self, corPenas, voar):
+        self.corPenas = corPenas
+        self.voar = voar
+
+    @abstractmethod
+    def cantar(self):
+        print('Estou cantando...')
+
+class BemTiVi(Ave):
+    def cantar(self):
+        super().cantar()
+        print('BEM-TI-VI')
+
+
+class PicaPau(Ave):
+    def cantar(self):
+        print('HEHEHEHE HE HEHEHEHE HE!!!!!')
+        print('HMMM BOLO DE MURANGO')
+
+class Galinha(Ave):
+    def cantar(self):
+        print('CÓ-CÓ-CÓ!!')
+
+
+bentivi = BemTiVi('Amarelo', True)
+picapau = PicaPau('Azul', True)
+galinha = Galinha('Preta', False)
+
+
+bentivi.cantar()''
+picapau.cantar()
+galinha.cantar()
+
 
 
 
