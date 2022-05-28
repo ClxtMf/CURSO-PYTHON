@@ -74,3 +74,81 @@ tenere.ligar()
 tenere.acelerar(80)
 tenere.frear(20)
 tenere.desligar()
+
+
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+class Pessoa:
+    def __init__(self, estado, renda):
+        self.estado = estado
+        self.renda = renda
+        self.imposto = 0
+
+    def calcularImposto(self):
+        ...
+
+    def exibirDados(self):
+        print(f'Estado: {self.estado}')
+        print(f'Renda: {self.renda}')
+        print(f'Imposto: {self.imposto}')
+        print(f'-------------------------\n\n')
+
+class Fisica(Pessoa):
+    def __init__(self, estado, renda, nome, cpf, dt_nascimento):
+        super().__init__(estado, renda)
+        self.nome = nome
+        self.cpf = cpf
+        self.dt_nascimento = dt_nascimento
+
+    def calcularImposto(self):
+        if self.renda > 2000:
+            self.imposto = self.renda * 0.05
+            print(f'Imposto a pagar: {self.imposto}')
+        else:
+            print('Você não precisa pagar imposto!!')
+
+    def exibirDados(self):
+        print(f'Nome: {self.nome}')
+        print(f'CPF: {self.cpf}')
+        print(f'Dt de Nascimento: {self.dt_nascimento}')
+        super().exibirDados()
+
+class Juridica(Pessoa):
+    def __init__(self, estado, renda, cnpj, nf,rs):
+        super().__init__(estado, renda)
+        self.cnpj = cnpj
+        self.rs = rs
+        self.nf = nf
+
+    def calcularImposto(self):
+        self.imposto = self.renda * 0.2
+        print(f'Imposto a pagar: {self.imposto}')
+
+    def exibirDados(self):
+        print(f'Nome Fantasia: {self.nf}')
+        print(f'Razão Social: {self.rs}')
+        print(f'CNPJ: {self.cnpj}')
+        super().exibirDados()
+
+
+
+maria = Fisica('CE', 3000, 'Maria', '012.321.456-65', '15/05/2000')
+infinity = Juridica('BA', 200000, '01.123.654/0001-32','Infinity School', 'Infinity Treinamentos')
+
+maria.calcularImposto()
+infinity.calcularImposto()
+
+
+maria.exibirDados()
+infinity.exibirDados()
+
+
+
+
+
+
+
+
+
+ 
