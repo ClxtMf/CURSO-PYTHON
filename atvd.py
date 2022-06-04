@@ -7,8 +7,6 @@ class App:
         self.ConsumoDeMemoria = ConsumoDeMemoria
            
 class SmartPhone(ABC):
-
-    @abstractmethod
     def __init__(self, Fabricante, Memoria) -> None:
         self.Fabricante = Fabricante
         self. Memoria = Memoria
@@ -17,32 +15,75 @@ class SmartPhone(ABC):
         self.Ligado = False
         self.apps = []
 
-    @abstractmethod
+    
     def ligar(self):
         if not self.ligado:
             self.ligado = True
-            print('O smartphone está ligado...')
         else:
             print('Já está ligado...')
             
-    @abstractmethod
+    
     def desligar(self):
         if self.ligado:
             self.ligado = False
-            print('O smartphone foi desligado...')
         else:
             print('já está desligado...')
+
 
     @abstractmethod
     def AbrirApp(self, Nome, ConsumoBateria, ConsumoMemoria):
         pass
-
+    
     @abstractmethod
     def FecharApp(self, Nome):
         pass
+    
+    @abstractmethod
+    def ListarApps(self):
+        for app in self.apps:
+            print(f'Nome: {app.nome}')
+            print(f'Bateria: {app.ConsumoDeBateria}')
+            print(f'Mémoria: {app.ConsumoDeMemoria}')
+            print('--------------------------------')
 
+    def ExibirDados(self):
+        print(f'O fabricante: {self.Fabricante}')
+        
+
+
+class Xiaomi(SmartPhone):
+    def AbrirApp(self, Nome, ConsumoBateria, ConsumoMemoria):
+        if self.ligado:
+            app = App(Nome, ConsumoBateria, ConsumoMemoria)
+            if self.Bateria - app.ConsumoDeBateria <= 0:
+                print('Bateria descarregou...')
+                self.desligar()
+                if self.ConsumoMemoria + app.ConsumoDeMemoria > self.Memoria:
+                    print('Mémoria estourou...')
+                    self.desligar()
+                else:
+                    self.append(app)
+                    
+
+    def FecharApp(self, Nome):
+        return super().FecharApp(Nome)
 
     def ListarApps(self):
-        apps = 0
-        for i in range(apps):
-            apps += 1
+        return super().ListarApps()
+
+
+class Iphone(SmartPhone):
+    def __init__(self, Fabricante, Memoria) -> None:
+        super().__init__(Fabricante, Memoria)
+        self.Fabricante = Fabricante
+        self.Memoria = Memoria
+
+    def AbrirApp(self, Nome, ConsumoBateria, ConsumoMemoria):
+        return super().AbrirApp(Nome, ConsumoBateria, ConsumoMemoria)
+
+    def FecharApp(self, Nome):
+        return super().FecharApp(Nome)
+
+    def ListarApps(self):
+        return super().ListarApps()
+
