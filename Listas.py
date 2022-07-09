@@ -23,3 +23,5 @@ def lista(Lista_Função):
     print(f'Os valores são: {Lista_Função}')
 
 lista(Lista_Função)
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
