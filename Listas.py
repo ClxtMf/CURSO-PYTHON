@@ -135,3 +135,26 @@ def Média():
         print(f'As notas são: {lista_Média}')
         print(f'A média das notas somadas é: {sum(lista_Média) / 3}')
 Média()
+
+
+letra = ''
+lista = []
+for i in range(10):
+    letra = input('Informe uma letra: ')
+    if len(letra) > 1:
+        print('Digite apenas um caractere: ')
+        continue
+    else:
+        lista.append(letra)
+
+
+def contarConsoantes(lista):
+    cons = 0
+    for item in lista:
+        if item.lower() not in 'aeiou':
+            cons += 1
+
+    print(f'Quantidade de consoantes: {cons}')
+
+
+contarConsoantes(lista)
