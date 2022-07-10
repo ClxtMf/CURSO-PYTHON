@@ -77,7 +77,7 @@ tenere.desligar()
 
 
 
-!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+######################################################################
 
 class Pessoa:
     def __init__(self, estado, renda):
@@ -175,7 +175,7 @@ picapau = PicaPau('Azul', True)
 galinha = Galinha('Preta', False)
 
 
-bentivi.cantar()''
+bentivi.cantar()
 picapau.cantar()
 galinha.cantar()
 
