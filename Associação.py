@@ -454,29 +454,3 @@ Conta01 = Conta('020202-2', 'Calixto', '6.000,00')
 print(f'Número da conta: {Conta01.Numero}')
 print(f'Nome do titular: {Conta01.Titular}')
 print(f'Saldo do titular: {Conta01.Saldo}
-
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blog do Calixto</title>
-</head>
-<body>
-
-    <p style="color: Brown">Lorem ipsum dolor sit amet consectetur adipisicing elit.<br>
-       Vero, reiciendis quibusdam dolorum ab unde mollitia<br> ipsam voluptate
-       culpa accusamus voluptatum ut<br> aliquam neque harum perferendis, amet, 
-       quos<br> officiis explicabo repudiandae!</p>
-
-    <h4>
-        Olá, Meu nome é Calixto, Tenho 17 anos e gosto de café, apenas...
-    </h4>
-
-    <h4>
-        Maconha é planta droga é o bolsonaro...
-    </h4>
-
-</body>
-</html>
