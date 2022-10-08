@@ -254,3 +254,52 @@
     </body>
 </html>
 <!----------------------------------------------------------------------------------------------------->
+<html>
+    <head>
+        <title>Orçamento</title>
+        <meta charset="utf-8">
+    </head>
+
+    <body>
+        <h3></h3>
+        <form action="Formulário.html"> <!--Criação de formulário-->
+            <label>Nome da empresa : </label> <!--Indetificar do campo-->
+            <input type="text" name="txt_nome" placeholder="Digite o nome da empresa" required>
+
+            <label>CNPJ: </label> <!--type Number só aceita números-->
+            <input type="number" name="cnpj"placeholder="Digite o CNPJ da empresa" required>
+
+            <label>Senha: </label>
+            <input type="password" name="senha" placeholder="Digite sua senha" required>
+
+            
+            <br><br>
+
+            <label>Número de telefone: </label> 
+            <input type="number" name="telefone"placeholder="Digite seu número" required>
+
+            <label>Endereço da empresa : </label>
+            <input type="text" name="endereço" placeholder="Digite o endereço da empresa" required>
+
+
+
+            <br>
+            <br>
+
+            <label>Selecione seu serviço</label>
+            <select name="serviço"> <!-- Define um select-->
+                <option>Landing Page</option>
+                <option>PowerBI</option>
+                <option>Consultoria de Analise de Dados</option>
+            </select>
+            <br>
+            <br>
+            <label>Disponibilidade:</label><br>
+            <label>Manhã </label><input type="checkbox" name="turno"><br>
+            <label>Tarde </label><input type="checkbox" name="turno"><br>
+            <label>Noite </label><input type="checkbox" name="turno"><br>
+            <br>
+            <input type="submit" value="Enviar" style="background-color:green">
+        </form>
+    </body>
+</html>
