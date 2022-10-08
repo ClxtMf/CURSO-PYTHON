@@ -203,3 +203,54 @@
     </body>
 
 </html>
+
+<!------------------------------------------------------------------------------------------------------->
+
+    <html>
+    <head>
+        <title>Cadastro de alunos</title>
+        <meta charset="utf-8">
+    </head>
+
+    <body>
+        <h3>Formulário de alunos</h3>
+        <hr>
+
+        <form action="aula02.html"> <!--Criação de formulário-->
+            <label>Nome: </label> <!--Indetificar do campo-->
+            <input type="text" name="txt_nome" placeholder="Digite seu nome" required>
+
+            <label>Idade: </label> <!--type Number só aceita números-->
+            <input type="number" name="num-idade"placeholder="Digite sua idade" required>
+
+            <label>Seu Sexo: </label>
+            <label>Masculino</label>
+            <input type="radio" name="sexo_aluno" required>
+            <label>Feminino</label>
+            <input type="radio" name="sexo_aluno" required><br><br>
+
+            <label>Senha: </label>
+            <input type="password" name="senha" placeholder="Digite sua senha" required>
+
+            <br>
+            <br>
+
+            <label>Selecione seu curso</label>
+            <select name="curso"> <!-- Define um select-->
+                <option>Python</option>
+                <option>Metaverso</option>
+                <option>Django</option>
+                <option>Flask</option>
+            </select>
+            <br>
+            <br>
+            <label>Selecione seu turno:</label><br>
+            <label>Manhã </label><input type="checkbox" name="turno"><br>
+            <label>Tarde </label><input type="checkbox" name="turno"><br>
+            <label>Noite </label><input type="checkbox" name="turno"><br>
+            <br>
+            <input type="submit" value="Cadastrar" style="background-color:green">
+        </form>
+    </body>
+</html>
+<!----------------------------------------------------------------------------------------------------->
