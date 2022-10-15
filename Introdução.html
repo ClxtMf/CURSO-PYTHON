@@ -254,6 +254,51 @@
     </body>
 </html>
 <!----------------------------------------------------------------------------------------------------->
+    <!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>IFood</title>
+    </head>
+    <body>
+
+    <form action="Formulário.html">
+        <label>Nome: </label>
+        <input type="text" name="txt_name" placeholder="Digite seu nome" required>
+
+        <label>Número: </label>
+        <input type="number" name="phone" placeholder="(85) 9 0000-0000" required>
+
+        <label>Endereço: </label>
+        <input type="text" name="txt_enddereço" placeholder="Digite seu endereço" required><br><br>
+
+        <label>Faça seu pedido: </label><br>
+           
+           <label>Hamburguer </label>
+           <input type="checkbox" name="01"><br>
+
+           <label>Pizza </label>
+           <input type="checkbox" name="02"><br>
+
+           <label>Sanduiche Natural </label>
+           <input type="checkbox" name="03"><br>
+           
+           <label>Kalzone </label>
+           <input type="checkbox" name="04"><br><br>
+
+           <label>Selecione sua forma de pagamento: </label>
+           <select name="opcao">
+                <option>Dinheiro</option>
+                <option>Pix</option>
+                <option>Débito</option>
+                <option>Crédito</option>
+           </select><br><br>
+
+           <input type="submit" value="Enviar">
+
+    </form>
+    
+<!----------------------------------------------------------------------------------------------------->
 <html>
     <head>
         <title>Orçamento</title>
@@ -301,5 +346,121 @@
             <br>
             <input type="submit" value="Enviar" style="background-color:green">
         </form>
+    </body>
+</html>
+
+    <!---------------------------------------------------------------------------------------------------->
+    
+    <!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Formulário</title>
+    </head>
+
+
+    <body>
+        <!-- action = página pra onde o usuário vai após o envio -->
+        <form action="">
+           <label>Nome: </label>
+           <input type="text" name="txt_nome" placeholder="Digite o seu nome" required><br><br>
+
+           <label>Email: </label>
+           <input type="email" name="txt_email" placeholder="seunome@exemplo.com"><br><br>
+
+           <label>Senha: </label>
+           <input type="password" name="txt_senha" placeholder="Digite sua senha" required><br><br>
+
+           <label>Selecione o seu curso: </label>
+           <select name="opcao">
+                <option>Python</option>
+                <option>JAVA</option>
+                <option selected>Django</option>
+                <option>Flask</option>
+           </select><br><br>
+
+           <label>Turno: </label><br>
+           
+           <label>Manhã: </label>
+           <input type="checkbox" name="manha">
+
+           <label>Tarde: </label>
+           <input type="checkbox" name="tarde">
+
+           <label>Noite: </label>
+           <input type="checkbox" name="noite"><br><br>
+
+
+           <input type="submit" value="Cadastrar">
+        </form><br>
+
+
+        <table border="1">
+            <tr> <!--Criação de linha-->
+                <th>Matricula</th> <!--Criação de um cabeçalho-->
+                <th>Nome</th>
+                <th>Cursos</th>
+                <th>Notas</th>
+            </tr>
+
+            <tr>
+                <td>0001.</td>
+                <td>Márcio Calisto</td>
+                <td>Python</td>
+                <td>9.5</td>
+            </tr>
+
+            <tr>
+                <td>0002.</td>
+                <td>Curupira</td>
+                <td>DJango</td>
+                <td>8.0</td>
+            </tr>
+        </table><br><br>
+
+        <table border="1">
+
+            <tr>
+                <th>N. Pedido</th>
+                <th>Cliente</th>
+                <th>Pedido</th>
+                <th>Hora</th>
+                <th>Status</th>
+            </tr>
+
+            <tr>
+                <td>0001.</td>
+                <td>Miguel</td>
+                <td>hamburguer</td>
+                <td>19:00</td>
+                <td style="background-color: green">Saiu para a entrega</td>
+            </tr>
+
+            <tr>
+                <td>0002.</td>
+                <td>Luana</td>
+                <td>Pizza</td>
+                <td>19:10</td>
+                <td style="background-color: green">Saiu para a entrega</td>
+            </tr>
+
+            <tr>
+                <td>0003.</td>
+                <td>Fernanda</td>
+                <td>Calzone</td>
+                <td>19:13</td>
+                <td style="background-color: yellow">Em preparo</td>
+            </tr>
+
+            <tr>
+                <td>0004.</td>
+                <td>Gabriel</td>
+                <td>Hamburguer</td>
+                <td>19:20</td>
+                <td style="background-color: orange">Confirmado</td>
+            </tr>
+
+        </table>
+
     </body>
 </html>
