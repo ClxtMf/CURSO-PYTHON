@@ -18,27 +18,27 @@ print(Fco.cpf)
 
 """"""""""""""""""""""""""""""""""""""""""""
 
-class ContaBancária:
-    def __init__(self, titular, númerodaconta, saldo, vip):
+class ContaBancaria:
+    def __init__(self, titular, numerodaconta, saldo, vip):
         self.titular = titular
-        self.númerodaconta = númerodaconta
+        self.numerodaconta = numerodaconta
         self.Saldo = saldo
         self.vip = vip
-Calixto = ContaBancária('Calixto', 202020.5, 2.000, 'Sim')
-print(Calixto.númerodaconta)
+Calixto = ContaBancaria('Calixto', 202020.5, 2.000, 'Sim')
+print(Calixto.numerodaconta)
 
 
-Upgrad-0.1
+# Upgrad-0.1
 
 titular = input('Informe o nome do titular: ')
-númeroDaConta = float(input('informe o número da conta: '))
+numeroDaConta = float(input('informe o número da conta: '))
 saldo = float(input('informe o saldo do titular: '))
 vip =  bool(input('Informe se você é vip S - N: '))
 
-class ContaBancária:
+class ContaBancaria:
     def __init__(self):
         self.titular = titular
-        self.númerodaconta = númeroDaConta
+        self.numerodaconta = numeroDaConta
         self.Saldo = saldo
         self.vip = vip
         
@@ -46,11 +46,11 @@ class ContaBancária:
             print(input('Deseja ver seus beneficios S - N ? '))
         else:
             print(input('Deseja se fazer o cadastro vip S - N ?'))
-Calixto = ContaBancária()
+Calixto = ContaBancaria()
 
-"""""""""""""""""""""""""""""""""""""""""""""""""
+#############################################################################
 
-Upgrade - 0.2
+# Upgrade - 0.2
 
 class ContaBancaria:
 
@@ -100,7 +100,7 @@ conta1.depositar(1500)
 
 print(f'Seu saldo após o deposito: {conta1.saldo}')
 
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""
+#############################################################################
 
 class Elevador:
     def __init__(self, capacidade, qtd_andares, qtd_pessoas, andar_atual):
