@@ -53,7 +53,7 @@ Claudinho.Saude = 50
 
 Claudinho.get_Humor()
 
-!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+######################################################################
 
 class Salario:
     def __init__(self, valor_da_hora, qtd_Horas, comissao) -> None:
@@ -78,7 +78,7 @@ Funcionario = Funcionario('Calixto', 16, 22, 160, 1500)
 print(f'Salário Total: {Funcionario.SalárioTotal()}')
 
 
-!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+######################################################################
 
 
 class Endereco:
@@ -141,7 +141,7 @@ pizza_hut.inserirEndereco('Av Santos Dummont', 'Aldeota', 'Fortaleza')
 pizza_hut.inserirEndereco('Pe. Antonio Thomaz', 'Água Fria', 'Fortaleza')
 pizza_hut.exibirEnderecos()
 
-!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+######################################################################
 
 class Produto:
     def __init__(self, codigo, nome, valor):
@@ -200,7 +200,7 @@ while True:
         
         
         
-!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+######################################################################
 
 
 class Escola:
@@ -241,7 +241,7 @@ escola.matricularAluno(aluno2)
 escola.listarAlunos()
 
 
-!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+######################################################################
 
 
 '''
@@ -329,7 +329,7 @@ class Gerente(Funcionario):
 estagiario = Estagiario(342342, 'Lucas', 10000)
 gerente = Gerente(546455, 'Rodrigo', 60000)
 
-!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+######################################################################
 
 
 class Funcionario:
@@ -382,7 +382,7 @@ print(f'Sálario: {gerente.salario}')
 print(f'Setor: {gerente.Setor}')
 print(f'Comissão: {gerente.Comissao}')
 
-!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+######################################################################
 
 class Conta:
     def __init__(self, Numero, Titular, Saldo) -> None:
