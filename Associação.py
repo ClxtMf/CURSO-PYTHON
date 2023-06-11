@@ -59,7 +59,7 @@ class Salario:
     def __init__(self, valor_da_hora, qtd_Horas, comissao) -> None:
         self.Valor_Hora = valor_da_hora
         self.Qtd_Hora = qtd_Horas
-        self.Comissao = comissão
+        self.Comissao = comissao
 
     def CalcularSalario(self):
         return (self.Valor_Hora * self.Qtd_Hora) + self.Comissão
@@ -68,14 +68,14 @@ class Funcionario:
     def __init__(self, nome, idade, valor_da_hora, qtd_hora, comissao) -> None:
         self.Nome = nome
         self.Idade = idade
-        self.Salário = Salário(valor_da_hora, qtd_hora, comissao)
+        self.Salario = Salario(valor_da_hora, qtd_hora, comissao)
 
-    def SalárioTotal(self):
-        return self.Salário.CalcularSalario()
+    def SalarioTotal(self):
+        return self.Salario.CalcularSalario()
 
 Funcionario = Funcionario('Calixto', 16, 22, 160, 1500)
 
-print(f'Salário Total: {Funcionario.SalárioTotal()}')
+print(f'Salario Total: {Funcionario.SalarioTotal()}')
 
 
 ######################################################################
@@ -453,4 +453,4 @@ class Poupanca(Conta):
 Conta01 = Conta('020202-2', 'Calixto', '6.000,00')
 print(f'Número da conta: {Conta01.Numero}')
 print(f'Nome do titular: {Conta01.Titular}')
-print(f'Saldo do titular: {Conta01.Saldo}
+print(f'Saldo do titular: {Conta01.Saldo}')
